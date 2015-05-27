@@ -1,0 +1,164 @@
+object Form1: TForm1
+  Left = 249
+  Height = 631
+  Top = 60
+  Width = 623
+  Caption = 'Form1'
+  ClientHeight = 631
+  ClientWidth = 623
+  Color = clSilver
+  LCLVersion = '1.0.14.0'
+  object Label1: TLabel
+    Left = 181
+    Height = 16
+    Top = 96
+    Width = 19
+    Caption = 'NIS'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 176
+    Height = 16
+    Top = 185
+    Width = 33
+    Caption = 'Nama'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 181
+    Height = 16
+    Top = 272
+    Width = 28
+    Caption = 'Kelas'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 179
+    Height = 16
+    Top = 352
+    Width = 30
+    Caption = 'Email'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 32
+    Height = 25
+    Top = 96
+    Width = 75
+    Caption = 'Tambah'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 32
+    Height = 25
+    Top = 183
+    Width = 75
+    Caption = 'Rubah'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 32
+    Height = 25
+    Top = 272
+    Width = 75
+    Caption = 'Hapus'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object Button4: TButton
+    Left = 32
+    Height = 25
+    Top = 352
+    Width = 75
+    Caption = 'Keluar'
+    OnClick = Button4Click
+    TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 304
+    Height = 23
+    Top = 96
+    Width = 200
+    OnChange = Edit1Change
+    TabOrder = 4
+  end
+  object Edit2: TEdit
+    Left = 304
+    Height = 23
+    Top = 185
+    Width = 200
+    TabOrder = 5
+  end
+  object Edit3: TEdit
+    Left = 304
+    Height = 23
+    Top = 272
+    Width = 200
+    TabOrder = 6
+  end
+  object Edit4: TEdit
+    Left = 304
+    Height = 23
+    Top = 352
+    Width = 200
+    TabOrder = 7
+  end
+  object DBGrid1: TDBGrid
+    Left = 32
+    Height = 160
+    Top = 440
+    Width = 560
+    Color = clRed
+    Columns = <>
+    DataSource = Datasource1
+    TabOrder = 8
+  end
+  object Panel1: TPanel
+    Left = 216
+    Height = 50
+    Top = 16
+    Width = 170
+    Caption = 'FORMULIR SISWA'
+    TabOrder = 9
+    OnClick = Panel1Click
+  end
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = False
+    Properties.Strings = (
+      'AutoEncodeStrings='
+    )
+    Connected = True
+    HostName = 'localhost'
+    Port = 0
+    Database = 'tugaspd'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\wamp\bin\mysql\mysql5.1.36\bin\libmySQL.dll'
+    left = 544
+    top = 88
+  end
+  object ZQuery1: TZQuery
+    Connection = ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from Tugaspd'
+    )
+    Params = <>
+    left = 544
+    top = 176
+  end
+  object ZQuery2: TZQuery
+    Connection = ZConnection1
+    Params = <>
+    left = 544
+    top = 272
+  end
+  object Datasource1: TDatasource
+    DataSet = ZQuery1
+    left = 544
+    top = 352
+  end
+end
