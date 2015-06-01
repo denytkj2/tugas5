@@ -13,9 +13,10 @@ uses
 {$R *.res}
 
 begin
+  Application.Title:='tugaspd5_deny_tkj2';
   RequireDerivedFormResource := True;
   Application.Initialize;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(Ttugas_5, tugas_5);
   Application.Run;
 end.
 
